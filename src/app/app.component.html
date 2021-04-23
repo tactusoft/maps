@@ -1,29 +1,37 @@
 <div class="container">
-    <div class="row eds-header">
-        <div class="column-24 col-xs-12 col-sm-12">
-            <app-header></app-header>
-        </div>
+  <div class="row eds-header">
+    <div class="column-24 col-xs-12 col-sm-12">
+      <app-header></app-header>
     </div>
+  </div>
 
-    <div style="position: relative">
-        <div style="position: absolute; z-index: 1; top: 10px; right: 10px;">
-            <p-menubar [model]="itemsMenu"></p-menubar>
-
-        </div>
+  <div style="position: relative">
+    <div style="position: absolute; z-index: 1; top: 10px; right: 10px">
+      <p-menubar [model]="itemsMenu"></p-menubar>
     </div>
+  </div>
 
-    <div class="p-col-12">
-        <app-esri-map></app-esri-map>
-    </div>
-
-
+  <div class="p-col-12">
+    <app-esri-map></app-esri-map>
+  </div>
 </div>
 
-<p-dialog [resizable]="true" [style]="{'min-width': '500px'}" [header]="modalTitle" (onHide)="modalClose()" [(visible)]="showModal">
-    <div class="p-m-0">
-        <router-outlet (deactivate)="onDeactivate($event)"></router-outlet>
-    </div>
-    <ng-template pTemplate="footer">
-        <p-button icon="pi pi-times" (click)="modalClose()" label="Close" styleClass="p-button-text"></p-button>
-    </ng-template>
+<p-dialog
+  [resizable]="true"
+  [style]="{ 'max-height': '400px' }"
+  [header]="modalTitle"
+  (onHide)="modalClose()"
+  [(visible)]="showModal"
+>
+  <div class="p-m-0">
+    <router-outlet (deactivate)="onDeactivate($event)"></router-outlet>
+  </div>
+  <ng-template pTemplate="footer">
+    <p-button
+      icon="pi pi-times"
+      (click)="modalClose()"
+      label="Close"
+      styleClass="p-button-text"
+    ></p-button>
+  </ng-template>
 </p-dialog>

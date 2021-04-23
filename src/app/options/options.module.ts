@@ -5,7 +5,7 @@ import { FilterComponent } from './filter/filter.component';
 import { OptionsRoutingModule } from './options-routing.module';
 import { LayersComponent } from './layers/layers.component';
 import { ControlPanelComponent } from '../options/control-panel/control-panel.component';
-import { BoomarksComponent } from './boomarks/boomarks.component';
+import { BasemapGalleryComponent } from './basemapGallery/basemapGallery.component';
 // Modulos
 
 import { ReactiveFormsModule } from '@angular/forms';
@@ -16,7 +16,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 
 @NgModule({
-  declarations: [FilterComponent, LayersComponent, ControlPanelComponent, BoomarksComponent],
+  declarations: [FilterComponent, LayersComponent, ControlPanelComponent, BasemapGalleryComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,

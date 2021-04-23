@@ -5,13 +5,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { FilterComponent } from './filter/filter.component';
 import { LayersComponent } from './layers/layers.component';
 import { ControlPanelComponent } from '../options/control-panel/control-panel.component';
-import { BoomarksComponent } from './boomarks/boomarks.component';
+import { BasemapGalleryComponent } from './basemapGallery/basemapGallery.component';
 
 const routes: Routes =  [
    { path: 'filter', component: FilterComponent},
    { path: 'layer', component: LayersComponent},
    { path: 'panel', component: ControlPanelComponent},
-   { path: 'bookmarks', component: BoomarksComponent},
+   { path: 'bookmarks', component: BasemapGalleryComponent},
 ];
 
 @NgModule({

@@ -34,7 +34,7 @@ export class AppComponent {
         label: 'Bookmarks',
         icon: 'pi pi-fw pi-bookmark',
         routerLink: 'bookmarks',
-        command: (click) => { this.modalOpen('Bookmarks'); }
+        command: (click) => { this.modalOpen('Mapas Base'); }
       },
       {
         label: 'Markers',
