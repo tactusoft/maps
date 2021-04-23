@@ -1,0 +1,28 @@
+<div class="p-fluid">
+    <div class="p-fluid p-formgrid p-grid">
+        <div class="p-col-12">
+            <h5>Select a location from the List</h5>
+            <p-dropdown appendTo="body" [options]="sevenWonders" (onChange)="wonderChange($event)" [formControl]="wonderForm" optionLabel="name" placeholder="Select a Country">
+
+            </p-dropdown>
+            <!-- <select [formControl]="wonderForm" name="wonders" id="wonders">
+              <option *ngFor="let w of sevenWonders; let i = index" value="{{ i }}">
+                {{ w.name }}
+              </option>
+            </select> -->
+        </div>
+        <div class="p-col-12">
+            <p>{{ feedback }}</p>
+            <p>Form touched: {{ wonderForm?.touched }}</p>
+            <p>Form valid: {{ wonderForm?.valid }}</p>
+            <p>Form index value: {{ wonderForm?.value?.name }}</p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 
+<calcite-select (calciteSelectChange)="console($event)" [formControl]="wonderForm" name="wonders" id="wonders">
+    <calcite-option *ngFor="let w of sevenWonders; let i = index" value="{{ i }}">{{ w.name }}</calcite-option>
+</calcite-select> -->

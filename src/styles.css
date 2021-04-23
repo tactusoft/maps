@@ -1,0 +1,12 @@
+@import "https://js.arcgis.com/4.19/@arcgis/core/assets/esri/themes/light/main.css";
+
+body {
+    font-family: "Lato", sans-serif;
+    height: 100%;
+    min-height: 100%;
+    margin: 0 !important;
+}
+
+.scrim {
+    background-color: inherit;
+}
