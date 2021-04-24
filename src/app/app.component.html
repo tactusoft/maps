@@ -26,12 +26,4 @@
   <div class="p-m-0">
     <router-outlet (deactivate)="onDeactivate($event)"></router-outlet>
   </div>
-  <ng-template pTemplate="footer">
-    <p-button
-      icon="pi pi-times"
-      (click)="modalClose()"
-      label="Close"
-      styleClass="p-button-text"
-    ></p-button>
-  </ng-template>
 </p-dialog>

@@ -25,14 +25,14 @@ export class AppComponent {
         command: (click) => { this.modalOpen('Control Panel'); }
       },
       {
-        label: 'Layers',
+        label: 'Leyenda',
         icon: 'pi pi-fw pi-pencil',
         routerLink: 'layer',
-        command: (click) => { this.modalOpen('Layers'); }
+        command: (click) => { this.modalOpen('Leyenda'); }
       },
       {
-        label: 'Bookmarks',
-        icon: 'pi pi-fw pi-bookmark',
+        label: 'Mapas Base',
+        icon: 'pi pi-fw pi-map',
         routerLink: 'bookmarks',
         command: (click) => { this.modalOpen('Mapas Base'); }
       },

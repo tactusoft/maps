@@ -26,6 +26,5 @@ export class BasemapGalleryComponent implements AfterViewInit {
       view,
       container: widgetContainer1
     });
-
   }
 }
