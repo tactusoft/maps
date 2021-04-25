@@ -1,29 +1,33 @@
 <div class="container">
-  <div class="row eds-header">
-    <div class="column-24 col-xs-12 col-sm-12">
-      <app-header></app-header>
+    <div class="row eds-header">
+        <div class="column-24 col-xs-12 col-sm-12">
+            <app-header></app-header>
+        </div>
     </div>
-  </div>
 
-  <div style="position: relative">
-    <div style="position: absolute; z-index: 1; top: 10px; right: 10px">
-      <p-menubar [model]="itemsMenu"></p-menubar>
+    <div style="position: relative">
+        <div style="position: absolute; z-index: 1; top: 20px; left: 65px">
+            <button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-mr-2"></button>
+            <button pButton pRipple type="button" icon="pi pi-bookmark" class="p-button-rounded p-button-secondary p-mr-2"></button>
+            <button pButton pRipple type="button" icon="pi pi-search" class="p-button-rounded p-button-success p-mr-2"></button>
+            <button pButton pRipple type="button" icon="pi pi-user" class="p-button-rounded p-button-info p-mr-2"></button>
+            <button pButton pRipple type="button" icon="pi pi-bell" class="p-button-rounded p-button-warning p-mr-2"></button>
+        </div>
+        <div *ngIf="!showMenu" style="position: absolute; z-index: 1; top: 20px; right: 20px" (click)="showMenu = true">
+            <button pButton pRipple type="button" icon="pi pi-cog" class="p-button-rounded"></button>
+        </div>
+        <div *ngIf="showMenu" style="position: absolute; z-index: 1; top: 20px; right: 10px">
+            <p-menubar [autoDisplay]="true" [model]="itemsMenu"></p-menubar>
+        </div>
     </div>
-  </div>
 
-  <div class="p-col-12">
-    <app-esri-map></app-esri-map>
-  </div>
+    <div class="p-col-12">
+        <app-esri-map></app-esri-map>
+    </div>
 </div>
 
-<p-dialog
-  [resizable]="true"
-  [style]="{ 'max-height': '400px' }"
-  [header]="modalTitle"
-  (onHide)="modalClose()"
-  [(visible)]="showModal"
->
-  <div class="p-m-0">
-    <router-outlet (deactivate)="onDeactivate($event)"></router-outlet>
-  </div>
+<p-dialog [resizable]="true" [style]="{ 'max-height': '400px'  }" position="right" [header]="modalTitle" (onHide)="modalClose()" [(visible)]="showModal">
+    <div class="p-m-0">
+        <router-outlet (deactivate)="onDeactivate($event)"></router-outlet>
+    </div>
 </p-dialog>
